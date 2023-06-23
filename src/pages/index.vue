@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h1>hi</h1>
-    <UiCard />
+    <!-- <UiCard /> -->
   </div>
 </template>
 <script lang="ts" setup>
-import UiCard from "../components/ui-kit/UiCard.vue";
+// import UiCard from "../components/ui-kit/UiCard.vue";
 </script>

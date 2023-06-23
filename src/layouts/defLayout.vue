@@ -1,10 +1,10 @@
 <template>
+  <LeftBar />
   <slot />
-  <TaskBar />
 </template>
 
 <script setup lang="ts">
-import TaskBar from "../components/TaskBar.vue";
+import LeftBar from "../components/LeftBar.vue";
 </script>
 
 <style lang="scss" scoped></style>

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const serverUrl = "51.250.75.250";
-const headersConfig = {
+const headersConfig: Object = {
   "X-Custom-Header": "foobar",
 };
 
