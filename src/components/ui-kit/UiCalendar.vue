@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center section">
+  <div class="uiCalendar text-center section">
     <v-calendar
       class="custom-calendar max-w-full"
       :masks="masks"
@@ -23,6 +23,7 @@
         </div>
       </template>
     </v-calendar>
+    <div class="disable-selecting uiCalendar__addButton">+</div>
   </div>
 </template>
 
@@ -105,6 +106,25 @@ export default {
   }
   & .vc-day-dots {
     margin-bottom: 5px;
+  }
+}
+</style>
+
+<style lang="scss" scoped>
+.uiCalendar {
+  position: relative;
+  &__addButton {
+    position: absolute;
+    left: 90%;
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    text-align: center;
+    cursor: pointer;
+    background-color: $yellow-light;
+    font-size: 58.814px;
+    bottom: 30px;
+    z-index: 9999;
   }
 }
 </style>

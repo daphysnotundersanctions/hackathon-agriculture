@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import defLayout from "./layouts/defLayout.vue";
+import "@progress/kendo-theme-default/dist/all.css";
 </script>
 
 <template>
