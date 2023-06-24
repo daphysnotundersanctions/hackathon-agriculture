@@ -1,10 +1,23 @@
 <template>
   <div class="leftBar">
-    <p>Меню</p>
-    <div class="leftBar__button" v-for="(path, id) in routesList" :key="id">
-      <router-link :to="path.route">
-        <p>{{ path.name }}</p>
-      </router-link>
+    <div v-for="(path, id) in routesList" :key="id">
+      <div>
+        <router-link
+          class="leftBar__button"
+          :class="path.route === $route.path && 'leftBar__button--active'"
+          :to="path.route"
+        >
+          <p>{{ path.name }}</p>
+        </router-link>
+        <!-- проверка на начилие вложености в объектах -->
+        <div class="leftBar__afterRoutes" v-if="path.afterRoutes">
+          <template v-for="(aRoute, id) in path.afterRoutes" :key="id">
+            <router-link class="leftBar__afterButton" :to="aRoute.afterRoute">
+              <p>{{ aRoute.afterName }}</p>
+            </router-link>
+          </template>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -81,7 +94,18 @@ const routesList: Object = ref([
 <style scoped lang="scss">
 .leftBar {
   height: 100vh;
+  margin: 0 20px;
+  max-width: 210px;
+  width: 100%;
+  border-right: 1px solid $grey;
   &__button {
+    font-size: 20px;
+    &--active {
+    }
+  }
+  &__afterRoutes {
+    padding-left: 20px;
+    font-size: 16px;
   }
 }
 </style>
