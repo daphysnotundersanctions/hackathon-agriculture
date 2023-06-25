@@ -20,6 +20,7 @@
 </template>
 
 <script lang="ts">
+import { getTaskByID } from "../../API/ways/tasks";
 export default {
   props: {
     options: {
@@ -49,6 +50,13 @@ export default {
   },
   mounted() {
     this.$emit("input", this.selected);
+  },
+  methods: {
+    async getUserTasks() {
+      await getTaskByID(this.selected).then((responnse) => {
+        console.log(responnse);
+      });
+    },
   },
 };
 </script>
