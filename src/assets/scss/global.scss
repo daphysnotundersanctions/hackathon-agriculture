@@ -1,18 +1,43 @@
-@import url('./global.scss');
+@import url("./global.scss");
+*,
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: $white;
+  font-family: "Gilroy", sans-serif;
+}
 
-*, body,html { 
-    padding: 0;
-    margin:  0;
-    box-sizing: border-box;
+@font-face {
+  font-family: "Gilroy";
+  src: url("../font/Questrial-Regular.ttf");
 }
 
 a {
-    text-decoration: none;
-    color: $black;
+  text-decoration: none;
+  color: $black;
 }
 
 .disable-selecting {
-    -webkit-user-select: none;
-    -ms-user-select: none; 
-    user-select: none; 
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.defLayout {
+  background-color: $bg;
+}
+
+.page {
+  width: 100%;
+  padding-top: 40px;
+  padding-left: 40px;
+  @include tablet {
+    padding: 40px;
+  }
+  &__header {
+    color: $white;
+    font-size: 20px;
+  }
 }

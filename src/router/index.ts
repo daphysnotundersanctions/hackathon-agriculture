@@ -1,15 +1,23 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../pages/index.vue";
-import Calendar from "../pages/calendar.vue";
+import DataPage from "../pages/Data.vue";
+import EcoPage from "../pages/Eco.vue";
+import LogsPage from '../pages/Logs.vue';
 
 const routes: Array<any> = [
   {
-    path: "/",
-    component: Home,
+    path: "/data",
+    component: DataPage,
+    meta: { transition: 'slide-left' },
   },
   {
-    path: "/calendar",
-    component: Calendar,
+    path: "/eco",
+    component: EcoPage,
+    meta: { transition: 'slide-left' },
+  },
+  {
+    path: "/logs",
+    component: LogsPage,
+    meta: { transition: 'slide-left' },
   },
 ];
 
