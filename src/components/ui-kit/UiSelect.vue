@@ -64,9 +64,9 @@ export default {
 }
 
 .custom-select .selected {
-  background-color: #0a0a0a;
+  background-color: $grey;
   border-radius: 6px;
-  border: 1px solid #666666;
+  border: 1px solid $yellow-light;
   color: #fff;
   padding-left: 1em;
   cursor: pointer;
@@ -74,7 +74,7 @@ export default {
 }
 
 .custom-select .selected.open {
-  border: 1px solid #ad8225;
+  border: 1px solid $yellow-light;
   border-radius: 6px 6px 0px 0px;
 }
 
@@ -93,11 +93,11 @@ export default {
   color: #fff;
   border-radius: 0px 0px 6px 6px;
   overflow: hidden;
-  border-right: 1px solid #ad8225;
-  border-left: 1px solid #ad8225;
-  border-bottom: 1px solid #ad8225;
+  border-right: 1px solid $yellow-light;
+  border-left: 1px solid $yellow-light;
+  border-bottom: 1px solid $yellow-light;
   position: absolute;
-  background-color: #0a0a0a;
+  background-color: $grey;
   left: 0;
   right: 0;
   z-index: 1;
@@ -111,7 +111,7 @@ export default {
 }
 
 .custom-select .items div:hover {
-  background-color: #ad8225;
+  background-color: $grey-text;
 }
 
 .selectHide {
