@@ -5,19 +5,16 @@ import LogsPage from '../pages/Logs.vue';
 
 const routes: Array<any> = [
   {
-    path: "/data",
-    component: DataPage,
-    meta: { transition: 'slide-left' },
-  },
-  {
     path: "/eco",
     component: EcoPage,
-    meta: { transition: 'slide-left' },
+  },
+  {
+    path: "/data",
+    component: DataPage,
   },
   {
     path: "/logs",
     component: LogsPage,
-    meta: { transition: 'slide-left' },
   },
 ];
 

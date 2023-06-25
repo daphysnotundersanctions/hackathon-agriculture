@@ -7,11 +7,9 @@ import defLayout from "./layouts/defLayout.vue";
     <defLayout>
       <main class="page">
         <Suspense>
-          <router-view v-slot="{ Component }">
-            <transition name="scale" mode="out-in">
-              <component :is="Component" />
-            </transition>
-          </router-view>
+          <transition name="drain">
+            <router-view></router-view>
+          </transition>
         </Suspense>
       </main>
     </defLayout>
@@ -19,14 +17,33 @@ import defLayout from "./layouts/defLayout.vue";
 </template>
 
 <style>
-.scale-enter-active,
-.scale-leave-active {
-  transition: all 0.5s ease;
+.slither-enter-active,
+.slither-leave-active {
+  transition: transform 1s;
 }
 
-.scale-enter-from,
-.scale-leave-to {
-  opacity: 0;
-  transform: scale(0.9);
+.slither-enter,
+.slither-leave-to {
+  transform: translateX(-100%);
+}
+
+.slither-enter-to,
+.slither-leave {
+  transform: translateX(0);
+}
+
+.drain-enter-active,
+.drain-leave-active {
+  transition: transform 1s;
+}
+
+.drain-enter,
+.drain-leave-to {
+  transform: translateY(100%);
+}
+
+.drain-enter-to,
+.drain-leave {
+  transform: translateY(0);
 }
 </style>
